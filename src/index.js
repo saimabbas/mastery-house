@@ -6,7 +6,7 @@ import Home from "./home";
 import Blog from "./blog";
 import Blogs from "./blogs";
 import Service from "./service";
-import CaseStudy from "./casestudy";
+import CaseStudy1 from "./casestudy";
 import Contact from "./contact";
 import Service1 from "./services/blockchainService";
 import Service2 from "./services/aiDevelopment";
@@ -19,6 +19,7 @@ import Blog4 from "./mainblogs/Quantum";
 import Blog5 from "./mainblogs/ARtrends";
 import Blog6 from "./mainblogs/Cybersecurity";
 import Blog7 from "./mainblogs/SustainableTech";
+import CaseStudy from "./maincasestudy";
 
 const root = document.getElementById("root");
 const App = () => {
@@ -31,9 +32,13 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/casestudy1" element={<CaseStudy1 />} />
           <Route path="/casestudy" element={<CaseStudy />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services/blockchain-development" element={<Service1 />} />
+          <Route
+            path="/services/blockchain-development"
+            element={<Service1 />}
+          />
           <Route path="/services/ai-development" element={<Service2 />} />
           <Route path="/services/software-development" element={<Service3 />} />
           <Route path="/services/consulting" element={<Service4 />} />
