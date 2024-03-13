@@ -160,13 +160,38 @@ header {
   font-weight: 400;
   color: var(--color-slate-400);
   transition: 0.35s;
+  position: relative;
 }
-
+.header_right a svg {
+  color: var(--color-slate-200);
+  font-size: 1.45rem;
+  margin: 0 0 0 0.5rem;
+}
 .header_right a:hover {
   color: var(--color-slate-300);
 }
 .header_right a.active {
   color: var(--white);
+}
+
+.dropdown-box {
+  background-color: var(--color-slate-900);
+  padding: 1.75rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  width: max-content;
+  transform: translate(-10%, 5%);
+}
+.dropdown-box a {
+  color: var(--color-slate-200);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* Hero Section  */
@@ -627,6 +652,9 @@ header {
   z-index: 1;
   position: relative;
 }
+.casestudy-section.casestudy-main-page {
+  padding: 15rem 0;
+}
 .case-circle1 {
   width: 650px;
   z-index: -1;
@@ -812,7 +840,6 @@ header {
   color: var(--color-slate-100);
 }
 .cs-main-btn h5:hover > svg {
-  transform: translateX(7px);
   color: var(--color-slate-100);
 }
 .cs-main-btn h5 svg {
@@ -1259,6 +1286,25 @@ footer h6 {
   font-size: 1.85rem;
   color: var(--black);
 }
+.tb-social-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.tb-social-box .tbs-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.tb-social-box .tbs-social-icon svg {
+  font-size: 1.85rem;
+  color: var(--black);
+}
 
 /* ABOUT PAGE  */
 .about-section {
@@ -1524,7 +1570,7 @@ footer h6 {
 }
 .blog-page-cont img {
   width: 100%;
-  height: 620px;
+  height: 500px;
   object-fit: cover;
   border-radius: 1.5rem;
 }
@@ -1580,6 +1626,7 @@ footer h6 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   width: 100%;
+  grid-template-rows: auto;
 }
 .blogs-grid .blog-main-cont img {
   width: 100%;
@@ -1691,6 +1738,10 @@ footer h6 {
   width: auto;
   height: auto;
   object-fit: contain;
+}
+.tb-box-img svg {
+  font-size: 10rem;
+  color: var(--white);
 }
 .tb-box-img h4 {
   color: var(--white);
@@ -2312,7 +2363,7 @@ footer h6 {
     width: 80%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .header_right {
     display: none;
   }
@@ -2324,6 +2375,23 @@ footer h6 {
   }
   .technologies-box {
     grid-template-columns: 1fr 1fr;
+  }
+  .dropdown-box {
+    background-color: transparent;
+    padding: 2rem 0;
+    border-radius: unset;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+    transform: unset;
+  }
+  .dropdown-box a {
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem !important;
+  }
+  .mobile-menu-bottom a {
+    text-align: center !important;
   }
 }
 
@@ -2357,6 +2425,9 @@ footer h6 {
   }
   .hero-cont-left button {
     margin: 0 auto;
+  }
+  .hero-cont-left a {
+    width: 100%;
   }
   .service-section {
     padding: 5rem 0;
@@ -2394,6 +2465,10 @@ footer h6 {
   }
   .circle-1 {
     display: none;
+  }
+  .blogs-grid .blog-main-cont.bm-r-cont img {
+    height: 100% !important;
+    max-height: 25rem;
   }
   .swiper-head h2 {
     font-size: 2.5rem;
@@ -2776,6 +2851,10 @@ footer h6 {
   .hero-cont-left p {
     font-size: 1.6rem;
   }
+  .booking-cont a {
+    width: max-content;
+    margin: 0 auto;
+  }
   .gradient-btn {
     font-size: 1.6rem;
   }
@@ -2808,6 +2887,12 @@ footer h6 {
   }
   .tb-box-img img {
     width: 70px;
+  }
+  .tb-box-img svg {
+    font-size: 6.5rem;
+  }
+  .blog-main-cont {
+    height: unset;
   }
 }
 

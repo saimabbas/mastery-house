@@ -37,6 +37,7 @@ import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { Link } from "react-router-dom";
 
 function ARtrends() {
   gsap.registerPlugin(
@@ -85,10 +86,10 @@ function ARtrends() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog5} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>
                     Augmented Reality: Merging Digital <br /> and Physical
                     Realms
@@ -143,68 +144,77 @@ function ARtrends() {
                 <div className="blog-cont">
                   <div className="casestudy-head">
                     <h3 className="gradient-text">Read Our Blogs</h3>
-                    <a href="#">
+                    <Link to="/blogs">
                       View All <BsArrowRight />
-                    </a>
+                    </Link>
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <div className="blog-main-cont">
+                      <Link to="/blogs/seo" className="blog-main-cont">
                         <img src={Blog2} alt="" />
                         <div>
                           <h4>
                             SEO in the Age of AI: Navigating New Horizons in
                             Search Engine Optimization
                           </h4>
-                          <a href="/blog/seo">
+                          <a href="/blogs/seo">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                     <div className="blog-grid-right bgr-home">
-                      <div className="blog-main-cont bm-r-cont">
+                      <Link to="/blogs/ai" className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
                           <h4>The Rise of AI: Transforming Business in 2023</h4>
-                          <a href="/blog/ai">
+                          <a href="/blogs/ai">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </Link>
+                      <Link
+                        to="/blogs/decoding"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog3} alt="" />
                         <div>
                           <h4>
                             Decoding the Success DNA: The Digital Landscape in
                             2023
                           </h4>
-                          <a href="/blog/decoding">
+                          <a href="/blogs/decoding">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </Link>
+                      <Link
+                        to="/blogs/quantum"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog4} alt="" />
                         <div>
                           <h4>Quantum Computing: The Next Frontier in 2023</h4>
-                          <a href="/blog/quantum">
+                          <a href="/blogs/quantum">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </Link>
+                      <Link
+                        to="/blogs/ar-trends"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog5} alt="" />
                         <div>
                           <h4>
                             Augmented Reality: Merging Digital and Physical
                             Realms
                           </h4>
-                          <a href="/blog/ar-trends">
+                          <a href="/blogs/ar-trends">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
